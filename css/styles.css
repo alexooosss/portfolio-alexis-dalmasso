@@ -2874,3 +2874,63 @@ a.contact-profile-item:hover { color: var(--argent); }
   .contact-quick-links { flex-direction: column; }
   .contact-quick-btn { justify-content: center; }
 }
+
+/* ════════════════════════════════════════════
+   RESPONSIVE IMPROVEMENTS
+════════════════════════════════════════════ */
+
+/* 1. Apropos — breakpoint mobile manquant */
+@media (max-width: 768px) {
+  .apropos {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  .apropos-copy { align-items: center; }
+  .apropos p { max-width: 100%; }
+  .apropos-photo { max-width: 380px; margin: 0 auto; aspect-ratio: 4 / 5; }
+}
+
+/* 2. Contact — font-size corrigés (linter avait altéré les valeurs) */
+.contact-headline { font-size: clamp(1.8rem, 5vw, 3rem); }
+.contact-avail-status { font-size: 0.82rem; }
+.contact-profile-item { font-size: 0.8rem; }
+.contact-quick-btn { font-size: 0.8rem; }
+.contact-quick-label { font-size: 0.6rem; }
+
+/* 3. Parcours — clamp corrige + marges supprimées */
+.parcours-main .chrome-title.compact img {
+  max-height: clamp(180px, 28vw, 380px) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 4. Etoiles — height auto (clamp casse) */
+.star-img { height: auto; }
+
+/* 5. Competence name — reduit sur mobile */
+@media (max-width: 520px) {
+  .competence-name { font-size: clamp(1.3rem, 6vw, 1.8rem); }
+}
+
+/* 6. Header brand name — masque sous 380px */
+@media (max-width: 380px) {
+  .header-brand-name { display: none; }
+}
+
+/* 7. Contact cards — padding reduit sur mobile */
+@media (max-width: 480px) {
+  .contact-profile-card,
+  .contact-form-panel { padding: 1.25rem; }
+  .contact-layout { padding-bottom: 3rem; }
+}
+
+/* 8. Year selector — tres petits ecrans */
+@media (max-width: 380px) {
+  .year-btn { padding: 0.5rem 0.6rem; font-size: 0.7rem; letter-spacing: 0.03em; }
+}
+
+/* 9. Home stage cards — 2 cols sur tablette */
+@media (min-width: 540px) and (max-width: 768px) {
+  .home-stages-grid { grid-template-columns: repeat(2, 1fr); }
+}
