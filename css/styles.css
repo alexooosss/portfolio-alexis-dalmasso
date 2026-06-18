@@ -3183,3 +3183,1026 @@ a.contact-profile-item:hover { color: var(--argent); }
   margin: 0 0.1rem;
   background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
 }
+
+/* AC definition note */
+.ac-definition-note {
+  font-size: 0.72rem;
+  color: var(--argent-35);
+  font-style: italic;
+  padding: 0 clamp(1.2rem, 3vw, 2rem);
+  margin: -0.5rem 0 1rem;
+  line-height: 1.5;
+}
+
+/* AC definition note — override */
+.ac-definition-note {
+  font-size: 0.8rem !important;
+  color: var(--argent-60) !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 0 !important;
+  padding: 0.65rem clamp(1.25rem, 3vw, 2.25rem) !important;
+  border-top: 1px solid var(--ligne);
+  border-bottom: 1px solid var(--ligne);
+  background: rgba(255, 255, 255, 0.025);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── PROJET À L'ISSUE DU BUT ── */
+.projet-but-card {
+  padding: clamp(1.5rem, 3vw, 2.2rem) clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.projet-but-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ligne);
+}
+.projet-but-eyebrow {
+  font-family: var(--disp);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--argent-35);
+}
+.projet-but-title {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  background: var(--chrome-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.projet-but-tag {
+  font-family: var(--disp);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--argent);
+  -webkit-text-fill-color: var(--argent);
+  border: 1px solid var(--argent-35);
+  border-radius: var(--r-pill);
+  padding: 0.15rem 0.6rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+}
+.projet-but-body {
+  font-size: 0.9rem;
+  color: var(--argent-60);
+  line-height: 1.8;
+  margin: 0;
+}
+.projet-but-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--ligne);
+}
+.projet-but-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.projet-but-item-label {
+  font-family: var(--disp);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--argent-35);
+}
+.projet-but-item-val {
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+/* Profil — titre même taille que skills */
+.parcours-main .chrome-title.compact img {
+  max-height: clamp(120px, 18vw, 220px) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Profil — espacements page-header identiques à skills */
+.parcours-main .page-header {
+  padding-top: calc(var(--header-h) + 4rem) !important;
+  padding-bottom: clamp(2.5rem, 6vw, 4rem) !important;
+}
+.parcours-main .page-subtitle {
+  margin-top: clamp(2.2rem, 5vw, 3.2rem) !important;
+  margin-bottom: 0 !important;
+}
+
+/* Projet BUT — lien planning */
+.projet-but-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  font-family: var(--disp);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--argent-60);
+  text-decoration: none;
+  border-bottom: 1px solid var(--argent-35);
+  transition: color 0.2s, border-color 0.2s;
+}
+.projet-but-link:hover {
+  color: var(--argent);
+  border-color: var(--argent);
+}
+.projet-but-link::after {
+  content: "↗";
+  font-size: 0.7rem;
+}
+
+/* ── STAGE RÉALISATIONS ── */
+.stage-realisations {
+  margin-top: 1.5rem;
+  padding: 0 clamp(1rem, 5vw, 3rem);
+}
+.stage-real-label {
+  font-family: var(--disp);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--argent-35);
+  margin-bottom: 1rem;
+}
+.stage-real-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.stage-real-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.stage-real-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--ligne);
+}
+.stage-real-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s var(--ease);
+}
+.stage-real-item:hover .stage-real-img-wrap img {
+  transform: scale(1.04);
+}
+.stage-real-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+  border-color: var(--argent-35);
+}
+.stage-real-placeholder span {
+  font-family: var(--disp);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--argent-35);
+  text-align: center;
+  padding: 0.5rem;
+}
+.stage-real-caption {
+  font-size: 0.78rem;
+  color: var(--argent-60);
+  line-height: 1.5;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .stage-real-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Stage réalisations — toggle */
+.stage-real-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--ligne);
+  padding: 1rem 0 0.25rem;
+  cursor: pointer;
+  color: var(--argent-60);
+  text-align: left;
+}
+.stage-real-toggle:hover {
+  color: var(--argent);
+}
+.stage-real-toggle-label {
+  font-family: var(--disp);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.stage-real-count {
+  font-family: var(--disp);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--argent-35);
+}
+.stage-real-chevron {
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease);
+}
+.stage-real-toggle[aria-expanded="true"] .stage-real-chevron {
+  transform: rotate(180deg);
+}
+.stage-real-panel {
+  padding-top: 1.25rem;
+}
+
+/* Stage réalisations — toggle renforcé */
+.stage-real-toggle {
+  border: 1px solid var(--ligne-forte) !important;
+  border-radius: var(--r-md) !important;
+  padding: 0.9rem 1.2rem !important;
+  margin-top: 1.25rem;
+  background: linear-gradient(180deg, rgba(232,232,236,0.06), rgba(232,232,236,0.02)) !important;
+  color: var(--argent) !important;
+  transition: background 0.2s, border-color 0.2s;
+}
+.stage-real-toggle:hover {
+  border-color: var(--argent-60) !important;
+  background: linear-gradient(180deg, rgba(232,232,236,0.1), rgba(232,232,236,0.04)) !important;
+}
+.stage-real-toggle[aria-expanded="true"] {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-color: transparent !important;
+}
+.stage-real-toggle-label {
+  font-size: 0.75rem !important;
+  color: var(--argent) !important;
+}
+.stage-real-count {
+  color: var(--argent-60) !important;
+}
+.stage-real-panel {
+  border: 1px solid var(--ligne-forte);
+  border-top: none;
+  border-radius: 0 0 var(--r-md) var(--r-md);
+  padding: 1.25rem !important;
+  background: rgba(255,255,255,0.015);
+}
+
+/* Chrome A — header & footer logo */
+.header-logo,
+.footer-logo {
+  transform: rotate(-45deg) !important;
+  mix-blend-mode: screen !important;
+}
+
+/* Montée en compétence — toggle */
+.montee-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  gap:1rem;
+}
+.montee-toggle:hover .montee-title {
+  opacity: 0.8;
+}
+.montee-chevron {
+  flex-shrink: 0;
+  color: var(--argent-35);
+  transition: transform 0.35s var(--ease);
+}
+.montee-toggle[aria-expanded="true"] .montee-chevron {
+  transform: rotate(180deg);
+}
+.montee-panel {
+  padding-top: 1rem;
+}
+
+/* Montée — hauteur réduite quand replié */
+.montee-card {
+  padding: 0 !important;
+  gap: 0 !important;
+}
+.montee-toggle {
+  padding: 0.75rem clamp(1.5rem, 4vw, 2.8rem) !important;
+}
+.montee-panel {
+  padding: 0 clamp(1.5rem, 4vw, 2.8rem) 1.2rem !important;
+}
+
+/* Montée — panel masqué par défaut dès le chargement */
+.montee-panel {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.montee-toggle[aria-expanded="true"] + .montee-panel {
+  padding-top: 1rem !important;
+  padding-bottom: 1.2rem !important;
+}
+
+/* Montée — animation CSS pure, sans inline JS */
+.montee-panel {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1), padding 0.3s ease !important;
+}
+.montee-toggle[aria-expanded="true"] + .montee-panel {
+  max-height: 600px !important;
+  overflow: visible !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1.2rem !important;
+}
+
+/* Réalisation — visuel site cliquable */
+.stage-real-site-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+.stage-real-site-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s var(--ease);
+}
+.stage-real-site-link:hover img {
+  transform: scale(1.04);
+}
+.stage-real-site-hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--argent);
+  font-family: var(--disp);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.stage-real-site-link:hover .stage-real-site-hint {
+  opacity: 1;
+}
+
+/* Site screenshot — adapté au cadre */
+.stage-real-site-link {
+  aspect-ratio: 16 / 10 !important;
+}
+.stage-real-site-link img {
+  object-fit: contain !important;
+  object-position: top center !important;
+  background: #fff;
+}
+
+/* Site screenshot — suppression bande blanche */
+.stage-real-site-link img {
+  object-fit: cover !important;
+  object-position: top center !important;
+  background: transparent !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BUT 3 Réalisations — Families / Subfamilies / Carousel
+   ═══════════════════════════════════════════════════════════ */
+
+.real-families-container {
+  padding: 1.5rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+/* Family ─────────────────────────────────────────────────── */
+.real-family {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.real-family-header {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(200,160,80,0.22);
+}
+
+.real-family-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold, #c8a050);
+  margin: 0;
+}
+
+/* Subfamily grid ─────────────────────────────────────────── */
+.real-subfamily-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.real-subfamily {
+  flex: 1 1 280px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.real-subfamily--wide {
+  flex: 1 1 100% !important;
+  width: 100%;
+}
+
+.real-subfamily-title {
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(220,200,155,0.65);
+  margin: 0;
+}
+
+/* Site card ──────────────────────────────────────────────── */
+.real-site-wrap {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.real-site-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(200,160,80,0.18);
+  text-decoration: none;
+}
+
+.real-site-link img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.32s ease;
+}
+
+.real-site-link:hover img {
+  transform: scale(1.035);
+}
+
+.real-site-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.58);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.real-site-link:hover .real-site-hint,
+.real-site-link:focus .real-site-hint {
+  opacity: 1;
+}
+
+/* Carousel container ─────────────────────────────────────── */
+.real-carousel {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: rgba(0,0,0,0.22);
+  border: 1px solid rgba(200,160,80,0.12);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.real-carousel-track {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.real-carousel-slide {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.real-carousel-slide.active {
+  display: flex;
+}
+
+.real-carousel-slide img {
+  max-width: 100%;
+  max-height: 320px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Wide (full-row) carousels: GMP, Portes, Secrétariats, SF1 */
+.real-wide .real-carousel-slide img {
+  max-height: 440px;
+}
+
+/* Book variant (carnet, maintenance) */
+.real-book {
+  background: #f5f2ec;
+  border-color: rgba(180,140,60,0.25);
+}
+
+.real-book .real-carousel-track {
+  background: #f5f2ec;
+  min-height: 280px;
+}
+
+.real-book .real-carousel-slide img {
+  max-height: 440px;
+  box-shadow: 4px 6px 24px rgba(0,0,0,0.22);
+}
+
+.real-book .real-carousel-nav {
+  background: rgba(40,30,10,0.08);
+  border-top-color: rgba(180,140,60,0.2);
+}
+
+.real-book .real-carousel-counter {
+  color: rgba(80,60,20,0.6);
+}
+
+.real-book .real-carousel-btn {
+  border-color: rgba(180,140,60,0.4);
+  color: #7a6020;
+}
+
+.real-book .real-carousel-btn:hover {
+  background: rgba(180,140,60,0.2);
+}
+
+/* Carousel navigation ────────────────────────────────────── */
+.real-carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 0.55rem 1rem;
+  background: rgba(0,0,0,0.32);
+  border-top: 1px solid rgba(200,160,80,0.1);
+  flex-shrink: 0;
+}
+
+.real-carousel-btn {
+  background: rgba(200,160,80,0.12);
+  border: 1px solid rgba(200,160,80,0.28);
+  color: var(--gold, #c8a050);
+  font-size: 1.35rem;
+  line-height: 1;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.1s, border-color 0.15s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.real-carousel-btn:hover {
+  background: rgba(200,160,80,0.32);
+  border-color: rgba(200,160,80,0.55);
+  transform: scale(1.1);
+}
+
+.real-carousel-btn:active {
+  transform: scale(0.94);
+}
+
+.real-carousel-counter {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(220,195,145,0.55);
+  min-width: 4rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Caption ────────────────────────────────────────────────── */
+.real-caption {
+  font-size: 0.67rem;
+  color: rgba(200,175,130,0.5);
+  line-height: 1.45;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .real-subfamily {
+    flex: 1 1 100%;
+  }
+  .real-carousel-slide img {
+    max-height: 240px;
+  }
+  .real-wide .real-carousel-slide img {
+    max-height: 300px;
+  }
+  .real-book .real-carousel-slide img {
+    max-height: 320px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   Book Flip — animation page-tournée (Carnet ACD-GMP)
+   ═══════════════════════════════════════════════════════ */
+
+.bookflip-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #ede8de;
+  border: 1px solid rgba(180,140,60,0.28);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  user-select: none;
+}
+
+.bookflip-viewport {
+  position: relative;
+  perspective: 1600px;
+  background: linear-gradient(135deg, #ede8de 0%, #e0d8c8 100%);
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Spine shadow on left edge */
+.bookflip-viewport::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 14px;
+  background: linear-gradient(to right, rgba(0,0,0,0.16), transparent);
+  pointer-events: none;
+  z-index: 10;
+  border-radius: 0.5rem 0 0 0;
+}
+
+/* The 3D flipper: contains front + back faces */
+.bookflip-flipper {
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: transform 0.72s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  max-width: calc(100% - 3rem);
+}
+
+/* Flip triggered by JS */
+.bookflip-flipper.is-flipping {
+  transform: rotateY(-180deg);
+}
+
+/* Faces */
+.bookflip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.bookflip-face--front {
+  display: block;
+}
+
+.bookflip-face--back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookflip-face img {
+  max-width: 100%;
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  display: block;
+  box-shadow:
+    3px 5px 20px rgba(0,0,0,0.2),
+    -2px 0 8px rgba(0,0,0,0.08),
+    inset -3px 0 6px rgba(0,0,0,0.06);
+  border-radius: 1px;
+}
+
+/* Shadow pulse overlay during the flip */
+.bookflip-shadow-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.12) 0%,
+    rgba(0,0,0,0.06) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+}
+
+.bookflip-shadow-overlay.is-active {
+  animation: bookflip-shadow-pulse 0.72s ease-in-out forwards;
+}
+
+@keyframes bookflip-shadow-pulse {
+  0%   { opacity: 0; }
+  38%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Navigation — reuse .real-carousel-nav, override colours for the book theme */
+.bookflip-container .real-carousel-nav {
+  background: rgba(60,40,10,0.07);
+  border-top: 1px solid rgba(180,140,60,0.2);
+}
+
+.bookflip-container .real-carousel-counter {
+  color: rgba(70,50,15,0.6);
+}
+
+.bookflip-container .real-carousel-btn {
+  color: #7a5c18;
+  border-color: rgba(180,140,60,0.38);
+  background: rgba(180,140,60,0.1);
+}
+
+.bookflip-container .real-carousel-btn:hover {
+  background: rgba(180,140,60,0.24);
+  border-color: rgba(180,140,60,0.6);
+}
+
+@media (max-width: 640px) {
+  .bookflip-face img {
+    max-height: 300px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Book Flip v2 — Double-page spread + transparent backgrounds
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Strip old colored backgrounds from .real-book (Guide de Maintenance) */
+.real-book {
+  background: transparent;
+  border-color: rgba(200,160,80,0.12);
+}
+.real-book .real-carousel-track { background: transparent; }
+.real-book .real-carousel-nav {
+  background: rgba(0,0,0,0.22);
+  border-top-color: rgba(200,160,80,0.12);
+}
+.real-book .real-carousel-counter { color: rgba(220,195,145,0.55); }
+.real-book .real-carousel-btn {
+  border-color: rgba(200,160,80,0.28);
+  color: var(--gold, #c8a050);
+}
+.real-book .real-carousel-btn:hover { background: rgba(200,160,80,0.22); }
+
+/* Strip old colored backgrounds from bookflip container */
+.bookflip-container {
+  background: transparent;
+  border: none;
+}
+.bookflip-viewport {
+  background: transparent;
+  min-height: 0;
+  padding: 0;
+  perspective: none;
+  overflow: visible;
+}
+.bookflip-viewport::before { display: none; }
+
+/* Normalize nav colours to match standard theme */
+.bookflip-container .real-carousel-nav {
+  background: rgba(0,0,0,0.32);
+  border-top-color: rgba(200,160,80,0.1);
+}
+.bookflip-container .real-carousel-counter { color: rgba(220,195,145,0.55); }
+.bookflip-container .real-carousel-btn {
+  color: var(--gold, #c8a050);
+  border-color: rgba(200,160,80,0.28);
+  background: rgba(200,160,80,0.12);
+}
+.bookflip-container .real-carousel-btn:hover {
+  background: rgba(200,160,80,0.32);
+  border-color: rgba(200,160,80,0.55);
+}
+
+/* ── Book Spread layout ──────────────────────────────────────── */
+.book-spread {
+  position: relative;
+  perspective: 2000px;
+  width: 100%;
+  height: 360px;
+}
+
+/* Two static background pages always visible beneath the flipper */
+.book-static {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.book-static--left  { left: 0; z-index: 1; }
+.book-static--right { right: 0; z-index: 1; }
+
+/* Shared image style — both static pages and flipper faces */
+.book-page-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  box-shadow: 2px 4px 18px rgba(0,0,0,0.28);
+  border-radius: 1px;
+}
+
+/* Visual spine between pages */
+.book-spine {
+  position: absolute;
+  left: 50%;
+  top: 4%;
+  bottom: 4%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,0,0,0.3) 15%,
+    rgba(0,0,0,0.42) 50%,
+    rgba(0,0,0,0.3) 85%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+  z-index: 8;
+  pointer-events: none;
+}
+
+/* ── The animated page flipper ───────────────────────────────── */
+.book-flipper {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.78s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  z-index: 4;
+}
+
+/* Forward flip: right page folds around the spine (left edge) */
+.book-flipper--right {
+  right: 0;
+  transform-origin: left center;
+}
+
+/* Backward flip: left page folds around the spine (right edge) */
+.book-flipper--left {
+  left: 0;
+  transform-origin: right center;
+}
+
+.book-flipper.is-flipping-forward  { transform: rotateY(-180deg); }
+.book-flipper.is-flipping-backward { transform: rotateY(180deg); }
+
+/* Page faces */
+.book-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Back face is pre-rotated so it faces the viewer when parent is at ±180° */
+.book-face--back { transform: rotateY(180deg); }
+
+/* scaleX(-1) cancels the mirror that the parent rotation introduces */
+.book-back-mirror { transform: scaleX(-1); }
+
+/* Shadow pulse stays the same but the overlay now sits inside the transparent viewport */
+@media (max-width: 640px) {
+  .book-spread { height: 200px; }
+}
+
+/* ── Book spread: pages collées à la reliure ──────────────── */
+/* Page gauche : image poussée vers la droite (vers le dos) */
+.book-static--left  { justify-content: flex-end; }
+/* Page droite : image poussée vers la gauche (vers le dos) */
+.book-static--right { justify-content: flex-start; }
+/* Flipper droite (page qui tourne en avant) */
+.book-flipper--right .book-face { justify-content: flex-start; }
+/* Flipper gauche (page qui tourne en arrière) */
+.book-flipper--left  .book-face { justify-content: flex-end; }
+
+/* ── Taille uniforme des sous-familles ────────────────────── */
+/* Empêche les derniers items d'une rangée de s'étirer */
+.real-subfamily { max-width: 420px; }
+
+/* ── Video card ── */
+.real-video-wrap { width: 100%; border-radius: 6px; overflow: hidden; background: #000; }
+.real-video { display: block; width: 100%; max-height: 360px; object-fit: contain; }
+
+/* ── PDF link card ── */
+.real-pdf-wrap { width: 100%; }
+.real-pdf-link {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; padding: 36px 24px;
+  border: 1.5px solid rgba(200,160,80,0.25); border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  color: var(--gold, #c8a050); text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.real-pdf-link:hover { background: rgba(200,160,80,0.08); border-color: rgba(200,160,80,0.5); }
+.real-pdf-icon { width: 40px; height: 40px; flex-shrink: 0; }
+.real-pdf-label { font-size: 0.95rem; font-weight: 600; text-align: center; }
+.real-pdf-hint { font-size: 0.75rem; opacity: 0.55; text-align: center; }
+
+/* YouTube iframe sizing */
+.real-video-wrap { aspect-ratio: 16/9; position: relative; }
+.real-video-wrap iframe.real-video,
+.real-video-wrap video.real-video { position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; }
+
+/* ── YouTube thumbnail card ── */
+.real-yt-link { display: block; position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 6px; text-decoration: none; }
+.real-yt-thumb { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+.real-yt-link:hover .real-yt-thumb { transform: scale(1.04); }
+.real-yt-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.18); transition: background 0.2s; }
+.real-yt-link:hover .real-yt-overlay { background: rgba(0,0,0,0.08); }
+.real-yt-play { width: 68px; height: 48px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5)); }
+.real-yt-hint { position: absolute; bottom: 10px; right: 12px; font-size: 0.72rem; color: #fff; background: rgba(0,0,0,0.55); padding: 2px 8px; border-radius: 4px; }

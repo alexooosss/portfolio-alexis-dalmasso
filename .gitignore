@@ -48,3 +48,11 @@ package-lock.json
 
 # claude / outils locaux
 .claude/
+
+# Fichiers sources lourds (Photoshop, Illustrator) — non déployables
+*.psd
+*.ai
+public/Photos avec signalétique/
+BUT 2 Stage/
+# PDF source > 100 MB
+public/assets/carnet ACD GMP 4.pdf

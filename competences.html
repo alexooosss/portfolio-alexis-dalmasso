@@ -17,7 +17,7 @@
     <!-- HEADER -->
     <header class="site-header">
       <a href="index.html" aria-label="Accueil" class="header-brand">
-        <img src="public/Logo%20AD.png" alt="AD" class="header-logo">
+        <img src="public/chrome-a.png" alt="AD" class="header-logo">
         <span class="header-brand-name">Portfolio Alexis Dalmasso</span>
       </a>
       <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -26,7 +26,7 @@
       <nav>
         <ul class="nav-menu" id="nav-menu">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="profil.html">Profil</a></li>
           <li><a href="competences.html" class="nav-active">Compétences</a></li>
           <li><a href="stages.html">Stages</a></li>
           <li><a href="skills.html">Skills</a></li>
@@ -51,17 +51,18 @@
       <!-- Montée en compétence -->
       <section class="montee-competences">
         <div class="montee-card glass-panel">
-          <div class="montee-card-head">
-            <span class="montee-eyebrow">Progression · 3 ans</span>
+          <button class="montee-toggle" aria-expanded="false">
             <h2 class="montee-title">Montée en compétence</h2>
+            <svg class="montee-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="montee-panel">
+            <p class="montee-body">
+              Dès le <span class="montee-year-tag">BUT 1</span>, j'ai posé des fondations concrètes et appliquées : analyser un marché (SWOT, PESTEL), segmenter une offre, structurer un argumentaire de vente, concevoir une stratégie de communication et ses supports. Mon stage chez Speedway m'a confronté aux indicateurs de performance réels et à la vente terrain.
+              En <span class="montee-year-tag">BUT 2</span>, les projets ont gagné en complexité : pilotage de plusieurs SAE (Situations d'Apprentissages et d'Evaluations) en parallèle (LAMA, REMAKE, B2BIKE), intégration des dimensions juridiques et financières d'une offre, introduction à l'e-business et au marketing digital, livrables professionnels en équipe sur des cas concrets.
+              En <span class="montee-year-tag">BUT 3</span>, la rupture est de posture, du faire au piloter : concevoir un modèle d'affaires complet (NutriShot), analyser une crise médiatique sur 6 041 tweets, mener une négociation grand compte (Klean Kanteen), intégrer la RSE dans une stratégie d'entreprise, et déployer ce portfolio web entièrement from scratch.
+              Chaque année a posé une couche sur la précédente : de l'application à la complexité, de la complexité à la décision stratégique.
+            </p>
           </div>
-          <p class="montee-body">
-            Entré en BUT avec des bases théoriques, j'ai progressivement construit un profil opérationnel au fil des trois années.
-            <span class="montee-year-tag">BUT 1</span> a posé les fondamentaux — marketing mix, techniques de vente, communication — et m'a confronté pour la première fois au terrain via un stage en magasin chez Speedway.
-            <span class="montee-year-tag">BUT 2</span> a complexifié la donne : gestion de plusieurs projets en simultané, introduction à l'e-business et à l'analyse de données, travail en équipe sur des cas réels avec des livrables exigeants.
-            <span class="montee-year-tag">BUT 3</span> m'a conduit à adopter une posture stratégique et entrepreneuriale — pitcher une startup devant jury, mener une négociation acheteur/fournisseur, et concevoir ce portfolio web entièrement from scratch.
-            Chaque année a posé une couche sur la précédente : de l'exécution à l'analyse, de l'analyse à la stratégie.
-          </p>
         </div>
       </section>
 
@@ -97,5 +98,15 @@
   <script src="js/traces.js"></script>
   <script src="js/competences.js"></script>
   <script src="js/effects.js"></script>
+  <script>
+    (function () {
+      var btn = document.querySelector('.montee-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      });
+    })();
+  </script>
 </body>
 </html>

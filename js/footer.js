@@ -4,7 +4,7 @@
   var footerMarkup = [
     '<div class="footer-grid">',
     '  <div class="footer-column footer-logo-column">',
-    '    <img src="public/Logo%20AD.png" alt="Logo Alexis Dalmasso" class="footer-logo">',
+    '    <img src="public/chrome-a.png" alt="Logo Alexis Dalmasso" class="footer-logo">',
     '  </div>',
     '  <div class="footer-column footer-identity">',
     '    <p class="footer-eyebrow">Portfolio personnel</p>',

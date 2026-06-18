@@ -240,8 +240,9 @@
         + '<div class="competence-chevron">' + SVG_CHEVRON + '</div>'
       + '</button>'
       + '<div class="competence-body">'
-        + introHtml // <-- ON LE SORT DU INNER : Il prendra 100% de la place !
-        + '<div class="competence-body-inner">' 
+        + introHtml
+        + '<p class="ac-definition-note">* AC = Apprentissage Critique : compétence précise et observable attendue à l\'issue de la formation, définie dans le référentiel national du BUT TC.</p>'
+        + '<div class="competence-body-inner">'
           + '<div class="ac-cards-grid" data-count="' + count + '"></div>'
         + '</div>'
       + '</div>';
