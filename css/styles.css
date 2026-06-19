@@ -4206,3 +4206,354 @@ a.contact-profile-item:hover { color: var(--argent); }
 .real-yt-link:hover .real-yt-overlay { background: rgba(0,0,0,0.08); }
 .real-yt-play { width: 68px; height: 48px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5)); }
 .real-yt-hint { position: absolute; bottom: 10px; right: 12px; font-size: 0.72rem; color: #fff; background: rgba(0,0,0,0.55); padding: 2px 8px; border-radius: 4px; }
+
+/* Prevent italic overhang clip on contact headline */
+.contact-headline { padding-right: 0.15em; }
+
+/* Fix italic overhang clip — background-clip:text clips at em box boundary */
+.contact-em { padding-right: 0.12em; }
+
+/* Contact — disponibilité agrandie + cliquable */
+.contact-avail-status {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 1rem; font-weight: 600; letter-spacing: 0.02em;
+}
+.contact-avail-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 1.1rem;
+  border: 1.5px solid rgba(200,160,80,0.35);
+  border-radius: 999px;
+  background: rgba(200,160,80,0.07);
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+.contact-avail-link:hover {
+  background: rgba(200,160,80,0.16);
+  border-color: rgba(200,160,80,0.65);
+  transform: translateY(-1px);
+}
+.contact-avail-arrow {
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.contact-avail-link:hover .contact-avail-arrow { transform: translateX(3px); }
+
+/* ── Footer mobile redesign ── */
+@media (max-width: 680px) {
+  .site-footer {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  /* Grille : logo+nom sur toute la largeur, puis nav+contact en 2 cols */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.25rem 1.5rem;
+  }
+
+  /* Logo + identité : une seule ligne sur toute la largeur */
+  .footer-logo-column {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .footer-identity {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    justify-content: center;
+  }
+
+  .footer-logo { width: 52px; }
+
+  /* Navigation et Coordonnées : 2 colonnes côte à côte */
+  .footer-grid > .footer-column:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  .footer-grid > .footer-column:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+
+  /* Footer bottom centré */
+  .footer-bottom {
+    display: block;
+    text-align: center;
+    margin-top: 1.25rem;
+  }
+
+  /* Email trop long : le tronquer proprement */
+  .footer-grid > .footer-column:nth-child(4) a[href^="mailto"] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+/* ── Footer mobile v2 : logo | nav | identité+coords ── */
+@media (max-width: 680px) {
+  .site-footer { padding: 1.5rem 1rem 1.25rem; }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 64px 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0 1rem;
+    align-items: start;
+  }
+
+  /* Col 1 : logo seul */
+  .footer-logo-column {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .footer-logo { width: 64px; }
+
+  /* Col 2 : navigation */
+  .footer-grid > .footer-column:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  /* Col 3 haut : identité */
+  .footer-identity {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  /* Col 3 bas : coordonnées */
+  .footer-grid > .footer-column:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: 0.9rem;
+  }
+
+  /* Email : tronquer si trop long */
+  .footer-grid > .footer-column:nth-child(4) a[href^="mailto"] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Footer bottom */
+  .footer-bottom {
+    display: block;
+    text-align: center;
+    margin-top: 1.25rem;
+  }
+
+  /* brand flex reste colonne */
+  .footer-brand { flex-direction: column; }
+}
+
+/* ── Footer mobile v3 — reset logo offset + grille propre ── */
+@media (max-width: 680px) {
+  .site-footer { padding: 1.5rem 1rem 1.25rem; }
+
+  .footer-logo {
+    left: 0;
+    width: 72px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 0 1rem;
+    align-items: start;
+  }
+
+  /* Col 1 : logo seul, span 2 rows */
+  .footer-logo-column {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Col 2 : navigation, span 2 rows */
+  .footer-grid > .footer-column:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  /* Col 3 haut : identité */
+  .footer-identity {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  /* Col 3 bas : coordonnées */
+  .footer-grid > .footer-column:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: 0.85rem;
+  }
+
+  .footer-grid > .footer-column:nth-child(4) a[href^="mailto"] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+  }
+
+  .footer-bottom { display: block; text-align: center; margin-top: 1.25rem; }
+  .footer-brand { flex-direction: column; }
+}
+
+/* Titre accueil agrandi */
+.hero-title-shell .chrome-title img {
+  max-height: clamp(220px, 38vw, 720px);
+}
+
+/* Réduit l'espace header → titre accueil */
+.hero-section { padding-top: calc(var(--header-h) + 1rem); }
+
+/* Réduit l'espace header → titre accueil v2 */
+.hero-section { padding-top: calc(var(--header-h) + 0.25rem); }
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — iPhone & petits écrans (≤ 430px)
+══════════════════════════════════════════════════════════════ */
+
+/* Fix montée en compétence : max-height trop petit sur mobile */
+.montee-toggle[aria-expanded="true"] + .montee-panel {
+  max-height: 2000px !important;
+}
+
+@media (max-width: 430px) {
+  /* ── Global ── */
+  body { font-size: 15px; }
+
+  /* ── Réduction paddings globaux ── */
+  .page-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* ── Hero accueil ── */
+  .hero-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .hero-description {
+    font-size: 0.88rem;
+  }
+  .hero-cta { flex-direction: column; gap: 0.65rem; }
+  .hero-cta .btn { width: 100%; text-align: center; justify-content: center; }
+
+  /* ── Compétences ── */
+  .montee-competences { padding: 0 1rem; }
+  .montee-toggle { padding: 0.75rem 1rem !important; }
+  .montee-panel { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .montee-body { font-size: 0.82rem; line-height: 1.75; }
+
+  .year-selector { padding: 0.35rem; gap: 0.25rem; }
+  .year-btn { font-size: 0.75rem; padding: 0.4rem 0.75rem; }
+
+  /* ── Stages ── */
+  .stage-card-split { flex-direction: column; }
+  .stage-visual { display: none; }
+  .stage-content { padding: 1.25rem 1rem; }
+  .stage-tags { gap: 0.35rem; }
+  .stage-tag { font-size: 0.65rem; }
+  .stage-real-toggle { padding: 0.75rem 1rem; }
+
+  /* ── Skills / Mad Skills ── */
+  .skill-item { padding: 1rem; }
+  .mad-skill-img { height: 120px; }
+
+  /* ── Contact ── */
+  .contact-intro { padding: 1rem; }
+  .contact-headline { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+  .contact-layout { gap: 1rem; padding: 0 1rem 2rem; }
+
+  /* ── Profil ── */
+  .parcours-split { flex-direction: column; }
+  .exp-item { padding: 1rem; }
+
+  /* ── Familles réalisations ── */
+  .real-subfamily-grid { grid-template-columns: 1fr !important; }
+  .real-subfamily { max-width: 100% !important; }
+
+  /* ── Footer ── */
+  .footer-grid {
+    grid-template-columns: 56px 1fr 1fr;
+    gap: 0 0.6rem;
+  }
+  .footer-logo { width: 52px; }
+  .footer-column h4 { font-size: 0.65rem; }
+  .footer-column a, .footer-column span { font-size: 0.7rem; }
+  .footer-eyebrow { font-size: 0.58rem; }
+}
+
+/* iPhone SE (375px) — encore plus serré */
+@media (max-width: 380px) {
+  .footer-grid { grid-template-columns: 48px 1fr 1fr; gap: 0 0.4rem; }
+  .footer-logo { width: 44px; }
+  .contact-headline { font-size: 1.6rem; }
+  .real-subfamily-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Titre carte compétence — une seule ligne sur mobile */
+@media (max-width: 480px) {
+  .competence-name {
+    font-size: clamp(1.1rem, 5vw, 1.45rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Titre carte compétence — empilement vertical sur mobile (pas de troncature) */
+@media (max-width: 480px) {
+  .competence-name {
+    font-size: clamp(1.3rem, 5.5vw, 1.6rem);
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  /* Passer competence-info en colonne : titre → count sur deux lignes séparées */
+  .competence-info {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  /* title-row : nom seul sur sa ligne, étoiles en dessous */
+  .competence-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  /* Count passe en dessous du titre, aligné à gauche */
+  .competence-count {
+    text-align: left;
+    font-size: 0.6rem;
+  }
+}
+
+/* Freebies supprimés — neutralisation des règles orphelines */
+.hero-freebie,
+.competence-freebie { display: none !important; }
+
+/* Hamburger collé à droite sur mobile */
+@media (max-width: 768px) {
+  .site-header nav { display: contents; }
+  .hamburger { margin-left: auto; }
+}

@@ -195,19 +195,7 @@
   }
 
   /* ===== BUILD COMPETENCE CARD ===== */
-  var FREEBIE_POSITIONS = [
-    { top: '0px', right: '40px' },
-    { top: '0px', right: '40px' },
-    { top: '0px', right: '40px' },
-    { top: '0px', right: '40px' }
-  ];
-
   function buildCompetence(name, traces, index) {
-    var freebieNum = (index % 3) + 1;
-    var pos = (name.toLowerCase() === 'marketing')
-      ? { top: '0px', right: '40px' }
-      : FREEBIE_POSITIONS[index % FREEBIE_POSITIONS.length];
-    var posStyle = Object.entries(pos).map(function (kv) { return kv[0] + ':' + kv[1]; }).join(';');
     var count = traces.length;
     var countLabel = count + ' apprentissage' + (count > 1 ? 's' : '') + ' critique' + (count > 1 ? 's' : '');
 
@@ -226,9 +214,7 @@
 
     // 3. Injection dans la structure HTML (ajout de .competence-body-inner pour correspondre à votre CSS)
     card.innerHTML =
-      '<img src="public/Freebie%20(' + freebieNum + ').png" alt="" aria-hidden="true" class="competence-freebie"'
-        + ' style="' + posStyle + ';">'
-      + '<button class="competence-header-btn" aria-expanded="false">'
+      '<button class="competence-header-btn" aria-expanded="false">'
         + '<div class="comp-bg-gradient"></div>'
         + '<div class="competence-info">'
           + '<div class="competence-title-row">'
